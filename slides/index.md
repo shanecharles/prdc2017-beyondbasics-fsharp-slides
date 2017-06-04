@@ -42,7 +42,7 @@
 - Basics
 - Active Patterns
 - Asynchronous
-- Extra resources
+- Summary
 
 ***
 
@@ -50,28 +50,39 @@
 
 - General purpose programming langauge on .Net
 - Member of the ML family
-- Began as a research project out of Microsoft
+- Functional first
  
 ***
 
-### Defining a function
+### Functional First
 
-
-    let printName name = printfn "Hello %s" name
+- Immutability by default
+- Currying and Partial Application
+- Discourages the use of nulls
+- You can still do OOP
 
 ---
 
 ### Discriminated Union
 
+- Value can be one or the other
+- Think enums with attached data
+
 
     type Cattitude =
-        | Lazy
-        | Grumpy of multiplier : int
+        | Grumpy of multiplier : uint32
         | Sarcastic of evidence : string list
         | Indifferent
+        | Affectionate
+        | Exploding
 
+---
 
-#### Record 
+### Record 
+
+- Data structure with named values
+- Read-only by default
+- Structural equality by default
 
 
     type Cat = { name : string; mood : Cattitude }
@@ -81,6 +92,7 @@
 ### F# is all Class
 
 
+    [<AllowNullLiteral>]
     type Cat (name : string, mood : Cattitude) =
         let mutable mood = mood
         member x.Name = name
@@ -91,27 +103,8 @@
         override x.ToString() =
             sprintf "%s is %A" x.Name x.Mood
 
-***
-
-### Linq'ish
-
-- Higher order functions over collections
-- This might seem familiar for some reason
-
 ---
 
-### What's in a name
-
-
-    Seq.map        // Select
-    Seq.filter     // Where
-    Seq.collect    // SelectMany
-    Seq.sortBy     // OrderBy
-    Seq.fold       // Aggregate
-    Seq.choose     // where + select
-    Seq.unfold     // ¯\_(ツ)_/¯
-
-***
 
 ### Pattern Matching
 
@@ -126,21 +119,29 @@
 
 - Based on workflows
 - Wrap the asynchronous code in `async { ... }`
-- Bang notation
+- Bang notation `let!`
 
 ***
 
+### Demos
+
+*** 
+
 ### Summary
 
-- 
+- Rapid prototyping with REPL and FSX files
+- Extend pattern matching with Active Patterns
+- Combine active patterns for expressive code
+- Async workflow with bang notation
+- Create our own builders
+
 
 ***
 
 ### Extra Resources
 
 - F# for Fun and Profit (https://fsharpforfunandprofit.com)
-- Microsoft Project Springfield (http://bit.ly/2jVeDpW)
-- Winnipeg .Net Slack
+- Winnipeg .Net Slack (http://winnipegdotnet.org)
 
 
     type ContactType = | Email | Twitter | Blog | GitHub
@@ -149,6 +150,6 @@
       | Twitter -> "@dead_stroke"
       | Blog    -> "http://geekeh.com"
       | GitHub  -> "shanecharles"
-      | Email   -> "shane_charles@outlook.com"
+      | Email   -> "shanecharles@burningicesolutions.com"
 
 ***
