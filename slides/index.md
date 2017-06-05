@@ -100,6 +100,18 @@
         override x.ToString() =
             sprintf "%s is %A" x.Name x.Mood
 
+---
+
+### Linq'ish
+
+
+    Seq.map     // Select
+    Seq.filter  // Where
+    Seq.sortBy  // OrderBy
+    Seq.choose  // Where + Select
+    Seq.fold    // Aggregate
+    Seq.unfold  // ¯\_(ツ)_/¯ 
+
 ***
 
 ### REPL Time
