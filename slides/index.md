@@ -40,8 +40,7 @@
 
 - What is F#
 - Basics
-- Active Patterns
-- Asynchronous
+- REPL
 - Summary
 
 ***
@@ -57,7 +56,6 @@
 ### Functional First
 
 - Immutability by default
-- Currying and Partial Application
 - Discourages the use of nulls
 - You can still do OOP
 
@@ -81,7 +79,6 @@
 ### Record 
 
 - Data structure with named values
-- Read-only by default
 - Structural equality by default
 
 
@@ -103,38 +100,20 @@
         override x.ToString() =
             sprintf "%s is %A" x.Name x.Mood
 
----
-
-
-### Pattern Matching
-
-- 16 types of matches out of the box
-- `match ... with`
-- Can use patterns in function signature
-- Extensible with Active Patterns
-
 ***
 
-### Asynchronous Programming
-
-- Based on workflows
-- Wrap the asynchronous code in `async { ... }`
-- Bang notation `let!`
-
-***
-
-### Demos
+### REPL Time
 
 *** 
 
 ### Summary
 
 - Rapid prototyping with REPL and FSX files
-- Extend pattern matching with Active Patterns
-- Combine active patterns for expressive code
+- Avoid nulls
+- Combine active patterns to improve readability
 - Async workflow with bang notation
-- Create our own builders
-
+- Create our own computation expressions / builders
+- Rail Road Oriented Programming
 
 ***
 
