@@ -1,3 +1,3 @@
-# Some("F#") is bettern than None #
+# Beyond the Basics with F# #
 
-This talk is an introductory talk on how to get started with F# and some advantages of using the language to complement your existing code base.
+This talk is an introduction to REPL based development with F# with the final result being a simple Azure Function.
