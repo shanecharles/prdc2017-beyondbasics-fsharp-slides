@@ -49,13 +49,12 @@
 
 - General purpose programming langauge on .Net
 - Member of the ML family
-- Functional first
  
 ***
 
 ### Functional First
 
-- Immutability by default
+- Immutable by default
 - Discourages the use of nulls
 - You can still do OOP
 
@@ -121,7 +120,6 @@
 ### Summary
 
 - Rapid prototyping with REPL and FSX files
-- Avoid nulls
 - Combine active patterns to improve readability
 - Async workflow with bang notation
 - Create our own computation expressions / builders
