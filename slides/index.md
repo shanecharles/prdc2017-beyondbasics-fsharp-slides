@@ -21,7 +21,6 @@
 ### About me
 
 - Shane Charles
-- Burning Ice Solutions Inc.
 - Functional programming enthusiast
 - Board member for Winnipeg .Net UG
 
@@ -108,8 +107,8 @@
     Seq.filter  // Where
     Seq.sortBy  // OrderBy
     Seq.choose  // Where + Select
+    Seq.collect // SelectMany
     Seq.fold    // Aggregate
-    Seq.unfold  // ¯\_(ツ)_/¯ 
 
 ***
 
